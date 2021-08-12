@@ -1,20 +1,33 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 
 // get all Posts
 router.get('/', (req, res) => {
     console.log('======================');
     Post.findAll({
-        attributes: ['id', 'post_url', 'title', 'created_at'],
         //order property to ensure latest news articles are shown first with DESC = descending order
-        order: [['created_at','DESC']],
-        //include JOIN to the User table via include:
+        order: [['created_at', 'DESC']],
+        attributes: [
+          'id',
+          'post_url',
+          'title',
+          'created_at',
+        ],
         include: [
-            {
+          // include the Comment model here:
+          {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            include: {
               model: User,
               attributes: ['username']
             }
-        ]
+          },
+          {
+            model: User,
+            attributes: ['username']
+          }
+        ]     
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
