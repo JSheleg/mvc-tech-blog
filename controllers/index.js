@@ -2,9 +2,9 @@
 //router instance collects everything and packages them for server.js to use
 
 const router = require('express').Router();
-const homeRoutes = require('./home-routes.js');
+const homeRoutes = require('./home-routes');
 const apiRoutes = require('./api');
-const dashboardRoutes = require('./dashboard-routes.js');
+const dashboardRoutes = require('./dashboard-routes')
 
 
 router.use('/api', apiRoutes);
