@@ -1,4 +1,5 @@
 async function signupFormHandler(event) {
+  console.log("login js entered")
   event.preventDefault();
 
   const username = document.querySelector('#username-signup').value.trim();
@@ -15,7 +16,7 @@ async function signupFormHandler(event) {
     }),
     headers: { 'Content-Type': 'application/json' }
     })
-    
+    console.log(response + " this is the response")
     //check the response status
     if(response.ok){
       document.location.replace('/');
