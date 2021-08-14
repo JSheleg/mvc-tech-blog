@@ -43,7 +43,7 @@ router.get('/:id', (req, res) => {
       where: {
         id: req.params.id
       },
-      attributes: ['id', 'post_url', 'title', 'created_at'],
+      attributes: ['id', 'post_text', 'title', 'created_at'],
       include: [
         {
           model: User,
@@ -66,10 +66,10 @@ router.get('/:id', (req, res) => {
 
 //create a post
 router.post('/', (req, res) => {
-    // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+    
     Post.create({
       title: req.body.title,
-      post_url: req.body.post_url,
+      post_text: req.body.post_text,
       user_id: req.body.user_id
     })
     .then(dbPostData => res.json(dbPostData))
