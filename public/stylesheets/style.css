@@ -8,11 +8,12 @@
     margin: 0;
     font-family: sans-serif;
     color: #333;
+    
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: white;
     font-weight: bold;
     transition: color .1s;
   }
@@ -80,6 +81,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+    background-color: green;
+    height: 100px;
+
   }
   
   header h1 {
@@ -89,6 +93,7 @@
   main {
     flex: 1;
     padding: 2% 4%;
+    background-color:slategray;
   }
   
   .btn-no-style {
@@ -97,7 +102,6 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -120,12 +124,17 @@
   .post {
     margin-bottom: 2%;
     line-height: 150%;
+    border: solid black 2px;
   }
   
   .post .title span {
     font-style: italic;
     font-size: 90%;
     color: #7d7d7d;
+  }
+
+  .post head{
+    height: 50px;
   }
   
   .edit-link {
@@ -175,4 +184,8 @@
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+  }
+
+  .title{
+    background-color: black;
   }

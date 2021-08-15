@@ -19,9 +19,6 @@ Post.init(
       post_text: {
         type: DataTypes.STRING(1234),
         allowNull: false,
-        validate: {
-          isURL: true
-        }
       },
       user_id: {
         type: DataTypes.INTEGER,

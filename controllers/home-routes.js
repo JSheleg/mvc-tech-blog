@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     Post.findAll({
       attributes: [
         'id',
-        'post_url',
+        'post_text',
         'title',
         'created_at'
       ],
@@ -46,7 +46,7 @@ router.get('/', (req, res) => {
 
 //login route
 router.get('/login', (req, res) => {
-  // console.log(req)
+  console.log(req.session.loggedIn)
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
@@ -63,7 +63,7 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'post_text',
       'title',
       'created_at'
     ],
@@ -92,7 +92,10 @@ router.get('/post/:id', (req, res) => {
       const post = dbPostData.get({ plain: true });
 
       // pass data to template
-      res.render('single-post', { post });
+      res.render('single-post', { 
+        post,
+        loggedIn: req.session.loggedIn
+      });
     })
     .catch(err => {
       console.log(err);
