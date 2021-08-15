@@ -15,7 +15,7 @@ var morgan = require('morgan');
 
 const sess = {
     secret: process.env.SECRET,
-    cookie: {},
+    cookie: {secure: auto},
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
