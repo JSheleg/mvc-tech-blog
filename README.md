@@ -86,8 +86,9 @@ This project is licensed under MIT
 * Created by Jessica Sheleg
 * [Project Repository](https://github.com/JSheleg/mvc-tech-blog)
 * [GitHub Portfolio](https://github.com/JSheleg)
+* [Heroku](https://secret-forest-08494.herokuapp.com/)
 
 ## Walk Through
 
-* Local Machine: [Local_Machine_WalkThrough]()
-* Heroku: [App on Heroku]()
+* Local Machine: [Local_Machine_WalkThrough](https://drive.google.com/file/d/1Ay7FEPOacgfvcMdAZ0LvrWj8hl0XwzHd/view)
+* Heroku: [App on Heroku](https://drive.google.com/file/d/1CYvViHcACrJurPy6xzgDqHC6JUL2gpkb/view)
