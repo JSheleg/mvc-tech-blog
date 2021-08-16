@@ -1,4 +1,18 @@
-# mvc-tech-blog
+# MVC Tech Blog ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
+
+## Description: 
+This project uses the Model-View-Controller(MVC) paradigm to create a blog site. On the site, users can view tech blogs, create an account, create/edit/delete blog posts and comment on posts the belong to both themselves but other users as well. 
+
+## Table of Contents:
+
+* [User Story](#user-story)
+* [Acceptance Criteria](#acceptance-criteria)
+* [Installation](#installation)
+* [Instructions](#instructions)
+* [Technology](#technology)
+* [License](#license)
+* [Questions](#questions)
+* [Walk Through](#walk-through)
 
 ## User Story:
     AS A developer who writes about tech
@@ -40,3 +54,40 @@
     WHEN I am idle on the site for more than a set time
     THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
+## Installation
+Note: This project is hosted on Heroku at https://secret-forest-08494.herokuapp.com/
+
+If you wish to run this code locally:
+* clone repo from GitHub and run `git clone <url copied from respository>`
+* run `npm install`
+* run `mysql -u root -p` && `source db/schema.sql` && `npm run seeds` to set up, seed and run the database
+* run `npm start` to start the server
+
+Note: A problem I faced when pushing it up to Heroku is the throwing of errors stating that the database didn't exist. I found that by pushing the code to heroku the first time with the sequelize.sync force set to true, it would set up the database. Then run the seeds and set the force back to false. Then push it to heroku and will be seeded and functional.
+
+## Technology
+
+* JavaScript
+* Node.js
+* Express.js
+* Dotenv (stores environment(.env) files.)
+* MySql
+* Sequelize
+* Bycrypt
+* Handlebars
+* Heroku with assistance from JawsDB
+
+## License
+
+This project is licensed under MIT
+
+## Questions
+
+* Created by Jessica Sheleg
+* [Project Repository](https://github.com/JSheleg/mvc-tech-blog)
+* [GitHub Portfolio](https://github.com/JSheleg)
+
+## Walk Through
+
+* Local Machine: [Local_Machine_WalkThrough]()
+* Heroku: [App on Heroku]()
